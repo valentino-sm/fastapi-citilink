@@ -46,7 +46,9 @@ def build_container() -> Container:
     container.register(ABCDatabaseEngine, SQLAlchemyEngine, url=settings.db_url)
 
     # ROUTES
-    container.register(ABCRouterBuilder, APIRouterBuilder)
+    container.register(
+        ABCRouterBuilder, APIRouterBuilder, default_link=settings.default_link
+    )
 
     # ASGI App
     container.register(

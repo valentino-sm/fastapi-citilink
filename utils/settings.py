@@ -13,3 +13,6 @@ class Settings(BaseSettings):
     debug: bool = False
 
     db_url: str = Field(default_factory=str)
+    default_link: str = (
+        "https://www.citilink.ru/product/mysh-oklick-605sw-opticheskaya-besprovodnaya-usb-chernyi-i-sinii-wm-28-384109/"
+    )
